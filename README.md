@@ -173,7 +173,7 @@ We believe in honest engineering. Current system constraints:
 
 ## 🚀 Future Roadmap
 
-- [ ] **GPS Integration**: Google Maps API for real-world pothole plotting.
+- [ ] **GPS Integration**: Better Integration of Google Maps API for real-world pothole plotting.
 - [ ] **RTSP Support**: Native integration for IP Security Cameras.
 - [ ] **WebRTC**: Lower latency video streaming for the dashboard.
 - [ ] **Edge Deployment**: Optimization for Jetson Nano / Raspberry Pi 5.
