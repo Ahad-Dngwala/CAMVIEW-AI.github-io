@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🛣️ CAMVIEW.AI
-### Enterprise-Grade Intelligent Traffic Safety Intelligence System
+### An Offline Enterprise-Grade Intelligent Traffic Safety Intelligence System
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-v1.32-FF4B4B.svg)](https://streamlit.io/)
