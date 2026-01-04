@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-<img width="2752" height="1536" alt="unnamed (1)" src="https://github.com/user-attachments/assets/7ddb7942-15e1-4536-8d12-d7b225d5b0e7" />
+<img width="2752" height="1501" alt="531752539-7ddb7942-15e1-4536-8d12-d7b225d5b0e7" src="https://github.com/user-attachments/assets/a0d320bc-76c2-45bc-a009-2c88df4ddb3a" />
 <img width="1919" height="1079" alt="Screenshot 2026-01-04 234631" src="https://github.com/user-attachments/assets/54765446-c881-478e-becd-47f7e041eee4" /><img width="1919" height="1079" alt="Screenshot 2026-01-04 234712" src="https://github.com/user-attachments/assets/31723fe5-758a-44fc-97ba-f2f8e6953b2a" />
 <img width="1919" height="1078" alt="Screenshot 2026-01-04 234732" src="https://github.com/user-attachments/assets/3b5de38e-2eee-464a-9661-80db4a1ef5bf" />
 <img width="1917" height="1079" alt="Screenshot 2026-01-04 234746" src="https://github.com/user-attachments/assets/129f33d8-ae88-4eb8-80ee-a8826f6237b8" />
