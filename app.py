@@ -514,21 +514,21 @@ def render_analytics_tab():
         st.markdown("**Event Types (Donut)**")
         if 'type' in df.columns:
             fig = px.pie(df, names='type', hole=0.4, color_discrete_sequence=px.colors.qualitative.Set3)
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     with col2:
         st.markdown("**Severity Bars**")
         severity_counts = df['severity'].value_counts()
         colors = {'CRITICAL': '#ef4444', 'WARNING': '#f59e0b', 'INFO': '#3b82f6'}
         fig = px.bar(x=severity_counts.index, y=severity_counts.values, color=severity_counts.index, color_discrete_map=colors)
-        st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+        st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     with col3:
         st.markdown("**Treemap View**")
         if 'type' in df.columns:
             type_sev = df.groupby(['type', 'severity']).size().reset_index(name='count')
             fig = px.treemap(type_sev, path=['type', 'severity'], values='count', color='severity', color_discrete_map=colors)
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     st.divider()
     
@@ -542,7 +542,7 @@ def render_analytics_tab():
             hourly = df.groupby(df['datetime'].dt.floor('h')).size().reset_index(name='Events')
             hourly.columns = ['Time', 'Events']
             fig = px.area(hourly, x='Time', y='Events', color_discrete_sequence=['#3b82f6'])
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     with col2:
         st.markdown("**Severity Timeline**")
@@ -550,7 +550,7 @@ def render_analytics_tab():
             sev_time = df.groupby([df['datetime'].dt.floor('h'), 'severity']).size().reset_index(name='Count')
             sev_time.columns = ['Time', 'Severity', 'Count']
             fig = px.line(sev_time, x='Time', y='Count', color='Severity', markers=True, color_discrete_map=colors)
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     st.divider()
     
@@ -563,14 +563,14 @@ def render_analytics_tab():
         if 'hour' in df.columns and 'day' in df.columns:
             pivot = df.groupby(['day', 'hour']).size().unstack(fill_value=0)
             fig = px.imshow(pivot, labels=dict(x="Hour", y="Day", color="Events"), color_continuous_scale='RdYlGn_r')
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     with col2:
         st.markdown("**Type by Hour**")
         if 'hour' in df.columns and 'type' in df.columns:
             pivot2 = df.groupby(['type', 'hour']).size().unstack(fill_value=0)
             fig = px.imshow(pivot2, labels=dict(x="Hour", y="Type", color="Count"), color_continuous_scale='Viridis')
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     st.divider()
     
@@ -593,13 +593,13 @@ def render_analytics_tab():
                       {'range': [70, 100], 'color': "lightcoral"}
                   ]}
         ))
-        st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+        st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     with col2:
         st.markdown("**Histogram**")
         if 'datetime' in df.columns:
             fig = px.histogram(df, x='hour', nbins=24, color_discrete_sequence=['#8b5cf6'])
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     with col3:
         st.markdown("**Cumulative**")
@@ -607,7 +607,7 @@ def render_analytics_tab():
             df_sorted = df.sort_values('datetime')
             df_sorted['cumulative'] = range(1, len(df_sorted) + 1)
             fig = px.line(df_sorted, x='datetime', y='cumulative', color_discrete_sequence=['#10b981'])
-            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+            st.plotly_chart(fig, width="stretch", config={'displayModeBar': False})
     
     st.divider()
     
