@@ -1,0 +1,13 @@
+opencv-python
+ultralytics
+streamlit
+numpy
+pandas
+pydantic
+PyYAML
+plotly
+seaborn
+matplotlib
+Pillow
+firebase-admin
+openpyxl
