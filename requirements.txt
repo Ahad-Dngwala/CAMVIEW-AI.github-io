@@ -11,3 +11,4 @@ matplotlib
 Pillow
 firebase-admin
 openpyxl
+lapx>=0.5.5
