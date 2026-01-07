@@ -218,3 +218,9 @@ streamlit run app.py
 - `detectors/`: Specific logic for each problem statement (Wrong-side, etc.).
 - `config/`: Settings and constants.
 - `data/logs/`: Stores `events.jsonl` for the dashboard.
+
+<div align="center">
+
+**Built with ❤️ for the Future of Traffic System by Ahad Dangarvawala**
+
+</div>
